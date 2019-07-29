@@ -1,15 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>(WIP) The Sticker Generator</title>
-</head>
+    <head>
+        <!--
+        body{
+            background-color:#FFADC8
+        }
+        -->
+        <style>
+            .img {
+                position:absolute;
+                bottom:400;
+                left:400;
+            }
+        </style>
+        
+        <link rel="stylesheet" type="text/css" href="WebsiteFormat.css">
+        
+        <title>
+           Make Some Stickers!
+        </title>
+    </head>
 
-<body>
-	<h1>Hello There</h1>
-	<h2>This is to check that Github worked</h2>
-	<p>This is to check git pull</p>
-	<p>And now with HTTPs</p>
-	<img src="sticker0.JPG" alt="Sticker 0">
-</body>
+    <body>
+        <script type="text/javascript">
+            
+            function switchOffEng() { 
+               document.getElementById("English").style.display = "none"; document.getElementById("Chinese").style.display = "block";
+            }
+            
+            function switchOffCHN() { 
+               document.getElementById("English").style.display = "block"; document.getElementById("Chinese").style.display = "none";
+            }
+            
+            function engFinishedProcessing(){
+                document.getElementById("EngRes").style.display = "block"; document.getElementById("EngWait").style.display = "none";
+            }
+            
+            function CHNFinishedProcessing(){
+                document.getElementById("CHNRes").style.display = "block"; document.getElementById("CHNWait").style.display = "none";
+            }
+        </script>
+        
+        <!---->
+        <div class = "EnglishDisplay" id = "English">
+            <div class = "EnglishLogo">
+                <img src="EnglishLogo.svg">
+            </div>  
+            
+            <div class = "EnglishGiveImage">
+                <img src="EnglishGiveImage.svg">
+            </div>
+        
+            <div class = "DispInEng" id = "OnEng">
+                <img onclick="switchOffEng()" src="DispInEng.svg">
+            </div>
+            
+            <div class = "EnglishWait" id = "EngWait">
+                <img src="EnglishWait.svg">
+            </div>
+            
+            <div class = "EnglishResults" id = "EngRes">
+                <img src="EnglishResults.svg">
+            </div>
+        </div>
+        <!---->
+        
+        <div class = ChineseDisplay id = Chinese>
+            <div class = "ChineseLogo">
+                <img src="ChineseLogo.svg">
+            </div>
+            
+            <div class = "ChineseGiveImage">
+                <img src="ChineseGiveImage.svg">
+            </div>
+            
+            <div class = "DispInCHN" id = "OnCHN">
+                <img onclick="switchOffCHN()"src="DispInCHN.svg">
+            </div>
+            
+            <div class = "ChineseWait" id = "CHNWait">
+                <img src="ChineseWait.svg">
+            </div>
+            
+            <div class = "ChineseResults" id = "CHNRes">
+                <img src="ChineseResults.svg">
+            </div>
+        </div>
+        
+        <!--
+        <div class="testbox"></div>
+        -->
+        
+    </body>
 </html>

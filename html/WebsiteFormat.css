@@ -1,0 +1,163 @@
+:root {
+    --GiveImage-Button-Left: 50%;
+    --GiveImage-Button-Top: 88%;
+    
+}
+
+body {
+  background: #FFADC8
+}
+
+.EnglishLogo {
+    position: absolute;
+    left: 50%;
+    top: 39%;
+    
+    /*
+    left: 50%;
+    top: 40%;
+    */
+    
+    transform: translate(-50%, -50%);
+}
+
+.EnglishGiveImage {
+    position: absolute;
+    left: var(--GiveImage-Button-Left);
+    top: var(--GiveImage-Button-Top);
+    
+    /*
+    left: 50%;
+    top: 88%;
+    */
+    
+    transform: translate(-50%, -50%);
+}
+
+.DispInEng {
+    position: absolute;
+    left: 90%;
+    top: 10%;
+    
+    /*
+    left: 50%;
+    top: 88%;
+    */
+    
+    transform: translate(-50%, -50%);
+}
+
+.EnglishWait{
+    position: absolute;
+    left: var(--GiveImage-Button-Left);
+    top: var(--GiveImage-Button-Top);
+    
+    /*
+    left: 50%;
+    top: 88%;
+    */
+    
+    transform: translate(-50%, -50%);
+}
+
+.EnglishResults{
+    position: absolute;
+    left: var(--GiveImage-Button-Left);
+    top: var(--GiveImage-Button-Top);
+    
+    /*
+    left: 50%;
+    top: 88%;
+    */
+    
+    transform: translate(-50%, -50%);
+}
+
+.ChineseLogo {
+    position: absolute;
+    left: 50%;
+    top: 39%;
+    
+    /*
+    left: 50%;
+    top: 40%;
+    */
+    
+    transform: translate(-50%, -50%);
+}
+.ChineseGiveImage {
+    position: absolute;
+    left: 50%;
+    top: 88%;
+    
+    /*
+    left: 50%;
+    top: 88%;
+    */
+    
+    transform: translate(-50%, -50%);
+}
+.DispInCHN {
+    position: absolute;
+    left: 90%;
+    top: 10%;
+    
+    /*
+    left: 50%;
+    top: 88%;
+    */
+    
+    transform: translate(-50%, -50%);
+}
+
+.ChineseWait{
+    position: absolute;
+    left: var(--GiveImage-Button-Left);
+    top: var(--GiveImage-Button-Top);
+    
+    /*
+    left: 50%;
+    top: 88%;
+    */
+    
+    transform: translate(-50%, -50%);
+}
+
+.ChineseResults{
+    position: absolute;
+    left: var(--GiveImage-Button-Left);
+    top: var(--GiveImage-Button-Top);
+    
+    /*
+    left: 50%;
+    top: 88%;
+    */
+    
+    transform: translate(-50%, -50%);
+}
+
+/*
+.testbox{
+  background-color: #FFDC00;
+  width: 100px;
+  height: 2000px;
+  margin: 0 auto;
+}
+*/
+
+
+#Chinese {
+    display: none;
+}
+#EngWait {
+    display: none;
+}
+#CHNWait {
+    display: none;
+}
+#EngRes {
+    display: none;
+}
+#CHNRes {
+    display: none;
+}
