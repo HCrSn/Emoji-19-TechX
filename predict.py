@@ -127,7 +127,7 @@ class Predictor:
             msg
             print(msg)
             font = ImageFont.truetype('./STHeiti Medium.ttc', size=fsize(len(str(msg))))
-            color = 'rgb(255, 255, 255)' # white coloßr
+            color = 'rgb(255, 255, 255)' # white color
             draw.text((xpos(len(str(msg))), 400), str(msg), fill=color, font=font)
             img.save('static/output{}.jpg'.format(num)) 
             pathlist.append('output{}.jpg'.format(num))
