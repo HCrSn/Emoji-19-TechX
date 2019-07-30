@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- STYLESHEET -->
+      <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <!--
+        body{
+            background-color:#FFADC8
+        }
+        -->
+        
+        <title>
+           Make Some Stickers!
+        </title>
+
+       <!-- JAVASCRIPT -->
+      <script src="../static/js/main.js"></script>
+   </head>
+   <body>
+        <script type="text/javascript">
+            
+            function switchOffEng() { 
+               document.getElementById("English").style.display = "none"; 
+               document.getElementById("Chinese").style.display = "block";
+                lang = "cn";
+            }
+            
+            function switchOffCHN() { 
+               document.getElementById("English").style.display = "block"; 
+               document.getElementById("Chinese").style.display = "none";
+                lang = "en";
+            }
+
+            function nowProcessingENG(){
+                document.getElementById("EngWait").style.display = "block"; 
+                document.getElementById("EngGive").style.display = "none";
+            }
+
+            function nowProcessingCHN(){
+                document.getElementById("CHNWait").style.display = "block"; 
+                document.getElementById("CHNGive").style.display = "none";
+            }
+            
+            function engFinishedProcessing(){
+                document.getElementById("EngRes").style.display = "block"; 
+                document.getElementById("EngWait").style.display = "none";
+            }
+            
+            function CHNFinishedProcessing(){
+                document.getElementById("CHNRes").style.display = "block"; 
+                document.getElementById("CHNWait").style.display = "none";
+            }
+
+            function uploadDisappear(){
+                document.getElementById("UploadMenu").style.display = "none";
+            }
+            
+        var lang = "en";
+        var doneProcessing = "no";
+        var startedProcessing = "no";
+        </script>
+
+        <div class = "EnglishDisplay" id = "English">
+                <div class = "EnglishLogo">
+                    <img src="../static/img/EnglishLogo.png">
+                </div>  
+                
+                <!--
+                <div class = "EnglishGiveImage" id = "EngGive">
+                    <img src="./static/img/EnglishGiveImage.svg">
+                </div>
+            -->
+            
+                <div class = "DispInEng" id = "OnEng">
+                    <img onclick="switchOffEng()" src="../static/img/DispInEng.svg">
+                </div>
+                
+                <div class = "EnglishWait" id = "EngWait">
+                    <img src="../static/img/EnglishWait.svg">
+                </div>
+                
+                <div class = "EnglishResults" id = "EngRes">
+                    <img src="../static/img/EnglishResults.svg">
+                </div>
+            </div>
+            <!---->
+            
+        <div class = ChineseDisplay id = Chinese>
+                <div class = "ChineseLogo">
+                    <img src="../static/img/ChineseLogo.svg">
+                </div>
+                
+                <div class = "ChineseGiveImage" id = "CHNGive">
+                    <img src="../static/img/ChineseGiveImage.svg">
+                </div>
+                
+                <div class = "DispInCHN" id = "OnCHN">
+                    <img onclick="switchOffCHN()"src="../static/img/DispInCHN.svg">
+                </div>
+                
+                <div class = "ChineseWait" id = "CHNWait">
+                    <img src="../static/img/ChineseWait.svg">
+                </div>
+                
+                <div class = "ChineseResults" id = "CHNRes">
+                    <img src="../static/img/ChineseResults.svg">
+                </div>
+            </div>
+
+
+            
+        <form class = "UploadButton" id="UploadMenu" action = "http://localhost:5000/" method = "POST" 
+               enctype = "multipart/form-data">
+            {% if prediction == None %}
+                <label for="file-upload" class="randomClass" style="cursor: pointer">
+                    <img id="upload" class="uploadImage" src="../static/img/EnglishGiveImage.svg">
+                  <input type="file" id="file-upload" name="image" onchange=submit() style="display:none;">
+                </label> 
+            {% else %}
+        </form>
+        
+        <div class="imageList">
+            <p>
+                <script>
+                    if (startedProcessing != "started"){
+                        startedProcessing = "started"
+                    }
+                </script>
+            {% for item in prediction %}
+                <li><img src="../static/{{ item }}"></img></li>
+
+                {% endfor %} 
+                {% endif %}
+            </p>
+        </div>
+
+            <script>
+                if (startedProcessing == "started"){
+                    nowProcessingENG();
+                }
+            </script>
+
+            {% if prediction != None %}
+            {% endif %}
+
+
+        <script type="text/javascript">
+        if (doneProcessing = "yes"){
+            if (lang = "en"){
+                engFinishedProcessing();
+            }
+            else if (lang = "cn"){
+                CHNFinishedProcessing();
+            }
+        }
+
+        </script>
+   </body>
+</html>

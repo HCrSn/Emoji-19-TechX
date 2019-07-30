@@ -1,6 +1,8 @@
 :root {
     --GiveImage-Button-Left: 50%;
     --GiveImage-Button-Top: 88%;
+    --Button_Width: 456px;
+    --Button_Height: 146px;
     
 }
 
@@ -19,6 +21,8 @@ body {
     */
     
     transform: translate(-50%, -50%);
+
+
 }
 
 .EnglishGiveImage {
@@ -32,7 +36,10 @@ body {
     */
     
     transform: translate(-50%, -50%);
+    height: var(--Button_Height);
+    width: var(--Button_Width);
 }
+
 
 .DispInEng {
     position: absolute;
@@ -58,6 +65,8 @@ body {
     */
     
     transform: translate(-50%, -50%);
+    height: var(--Button_Height);
+    width: var(--Button_Width);
 }
 
 .EnglishResults{
@@ -71,6 +80,8 @@ body {
     */
     
     transform: translate(-50%, -50%);
+    height: var(--Button_Height);
+    width: var(--Button_Width);
 }
 
 .ChineseLogo {
@@ -96,6 +107,8 @@ body {
     */
     
     transform: translate(-50%, -50%);
+    height: var(--Button_Height);
+    width: var(--Button_Width);
 }
 .DispInCHN {
     position: absolute;
@@ -121,6 +134,8 @@ body {
     */
     
     transform: translate(-50%, -50%);
+    height: var(--Button_Height);
+    width: var(--Button_Width);
 }
 
 .ChineseResults{
@@ -134,17 +149,48 @@ body {
     */
     
     transform: translate(-50%, -50%);
+    height: var(--Button_Height);
+    width: var(--Button_Width);
 }
-
 /*
-.testbox{
-  background-color: #FFDC00;
-  width: 100px;
-  height: 2000px;
-  margin: 0 auto;
+.UploadButton{
+    position: absolute;
+    left: var(--GiveImage-Button-Left);
+    top: var(--GiveImage-Button-Top);
+    
+    
+    left: 50%;
+    top: 88%;
+    
+    
+    transform: translate(-50%, -50%);
+    height: var(--Button_Height);
+    width: var(--Button_Width);
 }
 */
 
+/**/
+.uploadImage{
+    position: absolute;
+    left: var(--GiveImage-Button-Left);
+    top: var(--GiveImage-Button-Top);
+    
+    transform: translate(-50%, -50%);
+    height: var(--Button_Height);
+    width: var(--Button_Width);
+}
+
+
+.imageList{
+    width: auto;
+    height: auto;
+    max-width:50%;
+    max-height:50%;
+    left: 50vw;
+    top: 125vh;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
 
 #Chinese {
     display: none;
@@ -159,5 +205,8 @@ body {
     display: none;
 }
 #CHNRes {
+    display: none;
+}
+#photo {
     display: none;
 }
